@@ -51,6 +51,7 @@ function App() {
         news={news}
         setEditingNews={setEditingNews}
         deleteNews={deleteNews}
+        editingNews={editingNews}
       />
     </div>
   );

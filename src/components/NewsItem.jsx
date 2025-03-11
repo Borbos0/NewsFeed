@@ -1,6 +1,8 @@
 import "../styles/NewsItem.css";
 
-function NewsItem({ news, setEditingNews, deleteNews }) {
+function NewsItem({ news, setEditingNews, deleteNews, editingNews }) {
+  const isEditing = editingNews?.id === news.id;
+
   return (
     <div className="news-item">
       <h3 className="news-title">{news.title}</h3>
@@ -10,7 +12,11 @@ function NewsItem({ news, setEditingNews, deleteNews }) {
         <button className="edit-button" onClick={() => setEditingNews(news)}>
           Редактировать
         </button>
-        <button className="delete-button" onClick={() => deleteNews(news.id)}>
+        <button
+          className="delete-button"
+          onClick={() => deleteNews(news.id)}
+          disabled={isEditing}
+        >
           Удалить
         </button>
       </div>

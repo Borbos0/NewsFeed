@@ -1,7 +1,7 @@
 import NewsItem from "./NewsItem";
 import "../styles/NewsList.css";
 
-function NewsList({ news, setEditingNews, deleteNews }) {
+function NewsList({ news, setEditingNews, deleteNews, editingNews }) {
   return (
     <div className="news-list">
       {news.map((newsItem) => (
@@ -10,6 +10,7 @@ function NewsList({ news, setEditingNews, deleteNews }) {
           news={newsItem}
           setEditingNews={setEditingNews}
           deleteNews={deleteNews}
+          editingNews={editingNews}
         />
       ))}
     </div>
