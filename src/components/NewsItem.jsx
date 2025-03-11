@@ -1,4 +1,4 @@
-import "./styles/NewsItem.css";
+import "../styles/NewsItem.css";
 
 function NewsItem({ news, setEditingNews, deleteNews }) {
   return (

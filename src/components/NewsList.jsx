@@ -1,13 +1,13 @@
 import NewsItem from "./NewsItem";
-import "./styles/NewsList.css";
+import "../styles/NewsList.css";
 
 function NewsList({ news, setEditingNews, deleteNews }) {
   return (
     <div className="news-list">
-      {news.map((n) => (
+      {news.map((newsItem) => (
         <NewsItem
-          key={n.id}
-          news={n}
+          key={newsItem.id}
+          news={newsItem}
           setEditingNews={setEditingNews}
           deleteNews={deleteNews}
         />

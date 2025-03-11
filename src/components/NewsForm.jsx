@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./styles/NewsForm.css";
+import "../styles/NewsForm.css";
 
 function NewsForm({ addNews, editingNews, updateNews }) {
   const [title, setTitle] = useState("");
